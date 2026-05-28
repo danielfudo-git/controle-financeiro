@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -82,8 +83,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 </style>
 </head>
 <body>
-
-<!-- TELA DE LOGIN -->
+ 
 <div class="login-screen" id="login-screen">
   <div class="login-card">
     <div class="login-title">Controle Financeiro</div>
@@ -96,8 +96,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <div class="login-err" id="login-err">Senha incorreta</div>
   </div>
 </div>
-
-<!-- APP PRINCIPAL -->
+ 
 <div class="app" id="app-main">
   <div class="saldo-grid">
     <div class="saldo-card"><div class="saldo-label"><span class="dot dot-usd"></span>Wise USD</div><div class="saldo-valor" id="s-usd">$ —</div><div class="saldo-moeda">Dólares</div></div>
@@ -135,7 +134,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <div id="ext-container"><div class="empty"><i class="ti ti-loader"></i>Carregando...</div></div>
   </div>
 </div>
-
+ 
 <div class="toast" id="toast"></div>
 <div class="overlay" id="overlay">
   <div class="modal">
@@ -147,24 +146,19 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     </div>
   </div>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/jose@5.2.0/dist/browser/index.umd.min.js"></script>
+ 
 <script>
-// ─── CONFIGURAÇÕES ───────────────────────────────────────────
-var SENHA = 'financeiro2024';
-var SHEET_ID = '1kjKB2lBthJVA01N03IHaXrmDcG3nTAhHZV9pbzuiUAM';
-var SHEET_NAME = 'Lançamentos';
-var SA_EMAIL = 'operador-financeiro@gen-lang-client-0632172696.iam.gserviceaccount.com';
-var SA_KEY = "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDJ6Tu8f4RDadb7\nhtxVqh2e9gTqlywGbU3ZTmgcXb5/gfvpO8Sdh2lyTPgYXDpAujLWOsNLdNBHyZlE\nVGdqojumq25Wp4cvABwhWN1o9znOIq/thVbYa4EnhqazpUtc0R8/RTccG3IdIU/f\n0csEYI/FU05F1Y1Z7qsaSP4+Ycg61I7pk51xF/ZYh5O4w+jbpTB1JkahqmyObvkW\nJvku3G1p/kBh50oRpLVAA0qMjzgFgEOVfAWHR8d8iMD9bL6ARwASLaFBLL5jEurL\nf5YtnufIjgz1Wggg2t9N8Qqj8FpgeQoa5J8tzRaKL/fs7mhnUmFfRQniMqOTK3gy\n9eCuRBSXAgMBAAECggEAAmKI+P9QMO2n0B1cYX5BAeopzhpbNxFrP66/gXcRmd1c\nSOASwMH8zfbrxuBIzdy4Xs05FlCUaNMQRn097xJofiqWaVtqnnSaLUJCWnJYUlkY\nvXqVBB+ZwHCrBZv+6ZZzKVYOqK9utLpg5tj9bjLnyW7KkcrMDYZjETK266y2M6YR\n4mQ/hbF4DhS9Q8Bw8xslGQEU3L1Cko+J6HTowyvjGOcJhA2eNturG/YTS9K3aSnJ\nQptoEpFc/LjUSkbWK7CqTNOoC52ckJLrBlhQYQKlokQKm5VIHrXAFWNjwhIYxIf0\nfv7Gxp10Uslkv8JpH9he6dVOagyeMZ9y0CpyyAA+xQKBgQD/G1Ct5O2mH4+SsQby\nn36sIxnlqyzV9IcYH5qfbQfY1+QyVc0gKl6RmgT1PphXdkffOMO98yY78Cvi2ocO\nVrNDS87bEZwdS6QQnG5yKekAtxA4zJMCWFM/yZd9Uvv+OeVtNbOI+IWzfXQ9v442\niLVrayOuMoMBsjIJoRObEaGHWwKBgQDKnjtskvKbPkuGgaJ4yEXM7WvU706O0p5G\nGD3VpXB8Xc5AN/nMWrq5YfBsr54rovbnhc37D8U6CLP4yg+BwWSEBzx0vfLKGp0N\nbCsxRI21Bzb3keElu3oIgOtYYhmeLwCJ5WY1MrjwWNs7VXAKfz0rMjKKCG/kEqHq\nP9kpc9EodQKBgQCg/wwbsq6IeMKTQUWxORcoa76cQzs4i+n2P3vFwXmCUD2jxqJ9\n+j9UhG88lxRtnigdqCVga2Nl0Fzh/ifd1LmtbtpNRv/PPT19fjv1sJ1r5hxGvFTK\n1hMz3nXMkeKWvtMb6Rg1CSLX9AS4M3v8zqov8J3EAfzLxTnu+cj1xFq8oQKBgQCv\nnyk4ucIpR3ylMJYIBOdjceMGZQp9hxeDAB4Qod53HcPZK+uL8pRofPis7Ce4AP/r\nu7HHTGsSG1sLaPC58kvSmIcRVVctUJYSfVCO2rHNWFyPh9VUJETpO/1B1X4I+wqH\ne9v0fmuIgCw+KJb9sj3txAvEUv3Q/Ul0xjTP1kBTxQKBgQCPWHSW5Cp6iQz5FXE1\nESCCLhga6i2rzUQLDXXW/mS5IR8iwK9ouMQccG49B1Dx/KJWR/KrvjMD/WeC04aa\ncPXar6pgOo+OLtQXrU7YSILAAmoiIvFoeczWUTfYM/9WPXlH3tFwmJbGqgkMSNwL\nn/DSdMnnliYN6hSuYcsFFx0AjA==\n-----END PRIVATE KEY-----\n";
-// ─────────────────────────────────────────────────────────────
-
+var SENHA       = 'financeiro2024';
+var SHEET_ID    = '1kjKB2lBthJVA01N03IHaXrmDcG3nTAhHZV9pbzuiUAM';
+var SHEET_NAME  = 'Lançamentos';
+var SA_EMAIL    = 'operador-financeiro@gen-lang-client-0632172696.iam.gserviceaccount.com';
+var SA_KEY_B64  = 'MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDJ6Tu8f4RDadb7htxVqh2e9gTqlywGbU3ZTmgcXb5/gfvpO8Sdh2lyTPgYXDpAujLWOsNLdNBHyZlEVGdqojumq25Wp4cvABwhWN1o9znOIq/thVbYa4EnhqazpUtc0R8/RTccG3IdIU/f0csEYI/FU05F1Y1Z7qsaSP4+Ycg61I7pk51xF/ZYh5O4w+jbpTB1JkahqmyObvkWJvku3G1p/kBh50oRpLVAA0qMjzgFgEOVfAWHR8d8iMD9bL6ARwASLaFBLL5jEurLf5YtnufIjgz1Wggg2t9N8Qqj8FpgeQoa5J8tzRaKL/fs7mhnUmFfRQniMqOTK3gy9eCuRBSXAgMBAAECggEAAmKI+P9QMO2n0B1cYX5BAeopzhpbNxFrP66/gXcRmd1cSOASwMH8zfbrxuBIzdy4Xs05FlCUaNMQRn097xJofiqWaVtqnnSaLUJCWnJYUlkYvXqVBB+ZwHCrBZv+6ZZzKVYOqK9utLpg5tj9bjLnyW7KkcrMDYZjETK266y2M6YR4mQ/hbF4DhS9Q8Bw8xslGQEU3L1Cko+J6HTowyvjGOcJhA2eNturG/YTS9K3aSnJQptoEpFc/LjUSkbWK7CqTNOoC52ckJLrBlhQYQKlokQKm5VIHrXAFWNjwhIYxIf0fv7Gxp10Uslkv8JpH9he6dVOagyeMZ9y0CpyyAA+xQKBgQD/G1Ct5O2mH4+SsQbyn36sIxnlqyzV9IcYH5qfbQfY1+QyVc0gKl6RmgT1PphXdkffOMO98yY78Cvi2ocOVrNDS87bEZwdS6QQnG5yKekAtxA4zJMCWFM/yZd9Uvv+OeVtNbOI+IWzfXQ9v442iLVrayOuMoMBsjIJoRObEaGHWwKBgQDKnjtskvKbPkuGgaJ4yEXM7WvU706O0p5GGD3VpXB8Xc5AN/nMWrq5YfBsr54rovbnhc37D8U6CLP4yg+BwWSEBzx0vfLKGp0NbCsxRI21Bzb3keElu3oIgOtYYhmeLwCJ5WY1MrjwWNs7VXAKfz0rMjKKCG/kEqHqP9kpc9EodQKBgQCg/wwbsq6IeMKTQUWxORcoa76cQzs4i+n2P3vFwXmCUD2jxqJ9+j9UhG88lxRtnigdqCVga2Nl0Fzh/ifd1LmtbtpNRv/PPT19fjv1sJ1r5hxGvFTK1hMz3nXMkeKWvtMb6Rg1CSLX9AS4M3v8zqov8J3EAfzLxTnu+cj1xFq8oQKBgQCvnyk4ucIpR3ylMJYIBOdjceMGZQp9hxeDAB4Qod53HcPZK+uL8pRofPis7Ce4AP/ru7HHTGsSG1sLaPC58kvSmIcRVVctUJYSfVCO2rHNWFyPh9VUJETpO/1B1X4I+wqHe9v0fmuIgCw+KJb9sj3txAvEUv3Q/Ul0xjTP1kBTxQKBgQCPWHSW5Cp6iQz5FXE1ESCCLhga6i2rzUQLDXXW/mS5IR8iwK9ouMQccG49B1Dx/KJWR/KrvjMD/WeC04aacPXar6pgOo+OLtQXrU7YSILAAmoiIvFoeczWUTfYM/9WPXlH3tFwmJbGqgkMSNwLn/DSdMnnliYN6hSuYcsFFx0AjA==';
+ 
 var dados = [], tipo = '', delId = null, delGrupo = null;
-var accessToken = null, tokenExpiry = 0;
-
-// LOGIN
+var cachedToken = null, tokenExpiry = 0;
+ 
 function entrar() {
-  var v = document.getElementById('senha-input').value;
-  if (v === SENHA) {
+  if (document.getElementById('senha-input').value === SENHA) {
     document.getElementById('login-screen').style.display = 'none';
     document.getElementById('app-main').style.display = 'block';
     carregarDados();
@@ -172,33 +166,48 @@ function entrar() {
     document.getElementById('login-err').style.display = 'block';
   }
 }
-
-// JWT / TOKEN
+ 
+// JWT usando Web Crypto API nativa do browser
 async function getToken() {
   var now = Math.floor(Date.now() / 1000);
-  if (accessToken && now < tokenExpiry - 60) return accessToken;
-  var header = { alg: 'RS256', typ: 'JWT' };
-  var payload = {
+  if (cachedToken && now < tokenExpiry - 60) return cachedToken;
+ 
+  // Decodifica a chave PKCS8
+  var keyData = Uint8Array.from(atob(SA_KEY_B64), function(c) { return c.charCodeAt(0); });
+  var cryptoKey = await crypto.subtle.importKey(
+    'pkcs8', keyData.buffer,
+    { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' },
+    false, ['sign']
+  );
+ 
+  // Monta o JWT
+  var header = btoa(JSON.stringify({ alg: 'RS256', typ: 'JWT' })).replace(/=/g,'').replace(/\+/g,'-').replace(/\//g,'_');
+  var payload = btoa(JSON.stringify({
     iss: SA_EMAIL,
     scope: 'https://www.googleapis.com/auth/spreadsheets',
     aud: 'https://oauth2.googleapis.com/token',
     exp: now + 3600,
     iat: now
-  };
-  var key = await jose.importPKCS8(SA_KEY, 'RS256');
-  var jwt = await new jose.SignJWT(payload).setProtectedHeader(header).sign(key);
+  })).replace(/=/g,'').replace(/\+/g,'-').replace(/\//g,'_');
+ 
+  var sigInput = new TextEncoder().encode(header + '.' + payload);
+  var sigBuf = await crypto.subtle.sign('RSASSA-PKCS1-v1_5', cryptoKey, sigInput);
+  var sig = btoa(String.fromCharCode.apply(null, new Uint8Array(sigBuf))).replace(/=/g,'').replace(/\+/g,'-').replace(/\//g,'_');
+  var jwt = header + '.' + payload + '.' + sig;
+ 
+  // Troca JWT por access token
   var res = await fetch('https://oauth2.googleapis.com/token', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: 'grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=' + jwt
   });
   var json = await res.json();
-  accessToken = json.access_token;
+  if (!json.access_token) throw new Error('Token failed: ' + JSON.stringify(json));
+  cachedToken = json.access_token;
   tokenExpiry = now + 3600;
-  return accessToken;
+  return cachedToken;
 }
-
-// CARREGAR DADOS
+ 
 async function carregarDados() {
   try {
     var token = await getToken();
@@ -206,42 +215,44 @@ async function carregarDados() {
     var res = await fetch(url, { headers: { Authorization: 'Bearer ' + token } });
     var json = await res.json();
     var rows = json.values || [];
-    if (rows.length <= 1) { dados = []; }
-    else {
-      dados = rows.slice(1).map(function(r) {
-        return { id: Number(r[0]), data: r[1], tipo: r[2], conta: r[3], moeda: r[4], valor: Number(r[5]), desc: r[6] || '', grupo: r[7] ? Number(r[7]) : null };
-      });
-    }
+    dados = rows.length <= 1 ? [] : rows.slice(1).map(function(r) {
+      return { id: Number(r[0]), data: r[1], tipo: r[2], conta: r[3], moeda: r[4], valor: Number(r[5]), desc: r[6] || '', grupo: r[7] ? Number(r[7]) : null };
+    });
     atualizarSaldos();
     renderExt();
-  } catch(e) { toast('Erro ao carregar', 'err'); }
+  } catch(e) { console.error(e); toast('Erro ao carregar', 'err'); }
 }
-
-// SALVAR
+ 
 async function salvarLinhas(regs) {
   var token = await getToken();
   var values = regs.map(function(r) {
     return [String(r.id), r.data, r.tipo, r.conta, r.moeda, r.valor, r.desc, r.grupo ? String(r.grupo) : ''];
   });
   var url = 'https://sheets.googleapis.com/v4/spreadsheets/' + SHEET_ID + '/values/' + encodeURIComponent(SHEET_NAME + '!A:H') + ':append?valueInputOption=RAW';
-  await fetch(url, {
+  var res = await fetch(url, {
     method: 'POST',
     headers: { Authorization: 'Bearer ' + token, 'Content-Type': 'application/json' },
     body: JSON.stringify({ values: values })
   });
+  var json = await res.json();
+  if (json.error) throw new Error(json.error.message);
 }
-
-// DELETAR
+ 
 async function deletarLinhas(ids) {
   var token = await getToken();
-  var url = 'https://sheets.googleapis.com/v4/spreadsheets/' + SHEET_ID + '/values/' + encodeURIComponent(SHEET_NAME + '!A:H');
+  var metaRes = await fetch('https://sheets.googleapis.com/v4/spreadsheets/' + SHEET_ID + '?fields=sheets.properties', { headers: { Authorization: 'Bearer ' + token } });
+  var meta = await metaRes.json();
+  var sheetId = 0;
+  meta.sheets.forEach(function(s) { if (s.properties.title === SHEET_NAME) sheetId = s.properties.sheetId; });
+ 
+  var url = 'https://sheets.googleapis.com/v4/spreadsheets/' + SHEET_ID + '/values/' + encodeURIComponent(SHEET_NAME + '!A:A');
   var res = await fetch(url, { headers: { Authorization: 'Bearer ' + token } });
   var json = await res.json();
   var rows = json.values || [];
   var requests = [];
   for (var i = rows.length - 1; i >= 1; i--) {
     if (ids.indexOf(Number(rows[i][0])) !== -1) {
-      requests.push({ deleteDimension: { range: { sheetId: await getSheetId(token), dimension: 'ROWS', startIndex: i, endIndex: i + 1 } } });
+      requests.push({ deleteDimension: { range: { sheetId: sheetId, dimension: 'ROWS', startIndex: i, endIndex: i + 1 } } });
     }
   }
   if (requests.length) {
@@ -252,15 +263,7 @@ async function deletarLinhas(ids) {
     });
   }
 }
-
-async function getSheetId(token) {
-  var res = await fetch('https://sheets.googleapis.com/v4/spreadsheets/' + SHEET_ID, { headers: { Authorization: 'Bearer ' + token } });
-  var json = await res.json();
-  var sheet = json.sheets.find(function(s) { return s.properties.title === SHEET_NAME; });
-  return sheet ? sheet.properties.sheetId : 0;
-}
-
-// UI
+ 
 function atualizarSaldos() {
   var s = { 'Wise USD': 0, 'Wise BRL': 0, 'Nubank': 0 };
   dados.forEach(function(l) { if (s[l.conta] !== undefined) s[l.conta] += Number(l.valor); });
@@ -268,9 +271,9 @@ function atualizarSaldos() {
   document.getElementById('s-brl').textContent = 'R$ ' + fmt(s['Wise BRL']);
   document.getElementById('s-nu').textContent = 'R$ ' + fmt(s['Nubank']);
 }
-
+ 
 function fmt(v) { return Number(v).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
-
+ 
 function showScreen(s) {
   document.querySelectorAll('.screen').forEach(function(e) { e.classList.remove('active'); });
   document.querySelectorAll('.nav-btn').forEach(function(e) { e.classList.remove('active'); });
@@ -278,16 +281,16 @@ function showScreen(s) {
   document.getElementById('btn-' + s).classList.add('active');
   if (s === 'extrato') carregarDados();
 }
-
+ 
 function selTipo(t) {
   tipo = t;
   document.querySelectorAll('.tipo-btn').forEach(function(b) { b.classList.remove('selected'); });
   document.getElementById('tipo-' + t).classList.add('selected');
   renderCampos(t);
 }
-
+ 
 function hoje() { return new Date().toISOString().split('T')[0]; }
-
+ 
 function renderCampos(t) {
   var el = document.getElementById('campos');
   var h = '<div class="field-row"><div class="field"><label>Data</label><input type="date" id="f-data" value="' + hoje() + '"></div>';
@@ -318,10 +321,10 @@ function renderCampos(t) {
     u.addEventListener('input', calc); tx.addEventListener('input', calc);
   }
 }
-
+ 
 async function salvar() {
   if (!tipo) { toast('Selecione o tipo', 'err'); return; }
-  var data = document.getElementById('f-data') ? document.getElementById('f-data').value : '';
+  var data = document.getElementById('f-data').value;
   if (!data) { toast('Informe a data', 'err'); return; }
   var ts = Date.now(), regs = [];
   if (tipo === 'entrada') {
@@ -360,10 +363,10 @@ async function salvar() {
     tipo = '';
     document.querySelectorAll('.tipo-btn').forEach(function(b) { b.classList.remove('selected'); });
     document.getElementById('campos').innerHTML = '';
-  } catch(e) { toast('Erro ao salvar', 'err'); }
+  } catch(e) { console.error(e); toast('Erro ao salvar', 'err'); }
   finally { btn.disabled = false; btn.innerHTML = '<i class="ti ti-check"></i> Salvar lançamento'; }
 }
-
+ 
 function renderExt() {
   var fc = document.getElementById('fc').value || '', ft = document.getElementById('ft').value || '';
   var lista = dados.slice().sort(function(a, b) { return String(b.data).localeCompare(String(a.data)); });
@@ -385,10 +388,10 @@ function renderExt() {
   }).join('');
   el.innerHTML = '<table class="tbl"><thead><tr><th>Data</th><th>Tipo</th><th>Conta</th><th>Descrição</th><th style="text-align:right">Valor</th><th></th></tr></thead><tbody>' + rows + '</tbody></table>';
 }
-
+ 
 function pedirDel(id, grupo) { delId = id; delGrupo = grupo || null; document.getElementById('overlay').classList.add('open'); }
 function fecharModal() { delId = null; delGrupo = null; document.getElementById('overlay').classList.remove('open'); }
-
+ 
 async function confirmarDel() {
   fecharModal();
   var ids = [];
@@ -403,7 +406,7 @@ async function confirmarDel() {
   try { await deletarLinhas(ids); toast('Excluído', 'ok'); }
   catch(e) { toast('Erro ao excluir', 'err'); await carregarDados(); }
 }
-
+ 
 function toast(msg, t) {
   var el = document.getElementById('toast');
   el.textContent = msg; el.className = 'toast ' + (t === 'err' ? 't-err' : 't-ok') + ' show';
